@@ -1,4 +1,6 @@
+console.log('INICIA')
 function login(){
+    console.log('login')
     const myHeaders = new Headers();
     myHeaders.append("Accept", "application/json, text/plain, */*");
     myHeaders.append("Accept-Language", "es-419,es;q=0.9");
@@ -33,6 +35,7 @@ function login(){
 }
 
 function getIp(logindata){
+    console.log('getIp')
     fetch('https://api.ipify.org?format=json')
         .then(response => response.json())
         .then((data) => {
@@ -46,6 +49,7 @@ function getIp(logindata){
 }
 
 function savedata(  logindata, infoActivity){
+    console.log('savedata')
     const myHeaders = new Headers();
     myHeaders.append("Accept", "application/json, text/plain, */*");
     myHeaders.append("Accept-Language", "es-419,es;q=0.9");
