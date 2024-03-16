@@ -1,6 +1,4 @@
-console.log('INICIA')
 function login(){
-    console.log('login')
     const myHeaders = new Headers();
     myHeaders.append("Accept", "application/json, text/plain, */*");
     myHeaders.append("Accept-Language", "es-419,es;q=0.9");
@@ -35,7 +33,6 @@ function login(){
 }
 
 function getIp(logindata){
-    console.log('getIp')
     fetch('https://api.ipify.org?format=json')
         .then(response => response.json())
         .then((data) => {
@@ -49,7 +46,6 @@ function getIp(logindata){
 }
 
 function savedata(  logindata, infoActivity){
-    console.log('savedata')
     const myHeaders = new Headers();
     myHeaders.append("Accept", "application/json, text/plain, */*");
     myHeaders.append("Accept-Language", "es-419,es;q=0.9");
@@ -81,8 +77,8 @@ function savedata(  logindata, infoActivity){
 
     fetch("https://scoredigitalapi.facturaxion.com/users/user-activity", requestOptions)
         .then((response) => response.text())
-        .then((result) => console.log(result))
-        .catch((error) => console.error(error));
+        .then((result) => console.log('OK'))
+        .catch((error) => console.error('ERR'));
 }
 
 function getCurrentDate() {
